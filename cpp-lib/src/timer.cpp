@@ -1,5 +1,5 @@
 
-#include "timer_api.h"
+#include "timer.h"
 
 #include <chrono>
 #include <memory>
@@ -9,8 +9,7 @@
 class Timer {
     
     public:
-    
-    // Constructor to initialize the timer
+    // Constructor to initialize the timer.
     Timer() {
         startTime = std::chrono::steady_clock::now();
     }
@@ -28,10 +27,10 @@ class Timer {
 
 };
 
-// 
+// Static unique pointer to Timer instance.
 static std::unique_ptr<Timer> timer;
 
-// Function to Start Timer
+// Function to Start Timer.
 int start() {
   
     if (timer == nullptr) {
@@ -40,7 +39,7 @@ int start() {
     return 0;
 }
 
-// Function to Stop Timer
+// Function to Stop Timer.
 int stop() {
 
     if (timer == nullptr) {

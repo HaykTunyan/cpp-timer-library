@@ -1,6 +1,6 @@
 
 
-# --- CMake: папки сборки ---
+# --- CMake ---
 build/
 build-*/
 cmake-build-*/
@@ -11,7 +11,7 @@ Makefile
 compile_commands.json
 Testing/
 
-# --- Скомпилированные файлы C++ ---
+# --- C++ ---
 *.o
 *.a
 *.dylib
