@@ -3,6 +3,7 @@
 
 #include <chrono>
 #include <memory>
+#include <cstdio>
 
 
 // Timer class to measure elapsed time.
@@ -36,6 +37,10 @@ int start() {
     if (timer == nullptr) {
         timer = std::make_unique<Timer>();
     }
+
+    std::printf("C++: timer started\n");
+    std::fflush(stdout);
+
     return 0;
 }
 
@@ -47,6 +52,9 @@ int stop() {
     }
 
     int seconds = timer->getSeconds();
+
+    std::printf("C++: timer stopped, seconds = %d\n", seconds);
+    std::fflush(stdout);
     
     timer.reset();
 
