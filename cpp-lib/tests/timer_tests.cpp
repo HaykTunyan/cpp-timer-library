@@ -5,7 +5,7 @@
 #include <chrono>
 #include <thread>
 
-#include "timer_api.h"
+#include "timer.h"
 
 // Test fixture for Timer tests.
 
