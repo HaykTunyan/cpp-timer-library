@@ -1,5 +1,4 @@
 
-
 import SwiftUI
 
 struct ContentView: View {
@@ -47,8 +46,6 @@ struct ContentView: View {
     // Function to stop timer. 
     func stopTimer() {
         let seconds = TimerWrapper.stop()
-
-        print("Swift received: \(seconds) seconds")
 
         alertMessage = "Прошло \(seconds) секунд"
         showAlert = true
