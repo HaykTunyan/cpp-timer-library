@@ -1,6 +1,7 @@
 
 #include "timer.h"
 
+// Include < chrono> for time measurement, < memory> for Std::unique_ptr, and < cstdio> for printing to stdout.
 #include <chrono>
 #include <memory>
 #include <cstdio>
@@ -38,6 +39,7 @@ int start() {
         timer = std::make_unique<Timer>();
     }
 
+    // Print message to indicate that the timer has started.
     std::printf("C++: timer started\n");
     std::fflush(stdout);
 
@@ -53,6 +55,7 @@ int stop() {
 
     int seconds = timer->getSeconds();
 
+    // Print message to indicate that the timer has stoped.
     std::printf("C++: timer stopped, seconds = %d\n", seconds);
     std::fflush(stdout);
     

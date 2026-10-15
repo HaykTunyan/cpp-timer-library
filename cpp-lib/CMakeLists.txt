@@ -20,6 +20,7 @@ option(BUILD_TESTS "Build unit tests" ON)
 
 if(BUILD_TESTS)
     include(FetchContent)
+    # Fetch GoogleTest
     FetchContent_Declare(
         googletest
         URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
